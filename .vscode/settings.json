@@ -1,0 +1,7 @@
+{
+    "appService.deploySubpath": "",
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/9c9a69f1-a50e-4dd2-8ba4-358ff132bfa2/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/tabcorpapi"
+}
