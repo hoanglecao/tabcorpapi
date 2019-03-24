@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const BookSchema = mongoose.Schema({   
+const BookSchema = mongoose.Schema({  
+    uid: { type: mongoose.Schema.ObjectId, auto: true},
     title: String,
     description: String,   
     category: String
