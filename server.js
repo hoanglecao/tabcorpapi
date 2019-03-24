@@ -17,21 +17,12 @@ app.use(function(req, res, next) {
   });
 
 // Configuring the database
-const config = require('./config');
-const mongoose = require('mongoose');
+const config = require('./mongo');
+
 require('./book.routes')(app);
 
-mongoose.Promise = global.Promise;
-
 // Connecting to the database
-mongoose.connect(config.url, {
-    useNewUrlParser: true
-}).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
+config.connect();
 
 // default route
 app.get('/', (req, res) => {
@@ -40,5 +31,5 @@ app.get('/', (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, function(){
-  console.log('Listening on port ' + port);
+  console.log('Listening on port test ' + port);
  });
