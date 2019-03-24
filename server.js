@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
   });
 
 // Configuring the database
-const config = require('./config.js');
+const config = require('./config');
 const mongoose = require('mongoose');
 require('./book.routes')(app);
 
@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
     res.json({"message": "Welcome to Tabcorp Book app"});
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 app.listen(port, function(){
   console.log('Listening on port ' + port);
  });
